@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Glory", sans-serif;
+    font-size: ;
+    color: ;
+    background-color: #FFE799;
+
+}
+
+html {
+	font-size: 0.625em;
+    scroll-behavior: smooth;
+}
+
+/* BACKGROUND VIDEO */
+
+#site-bg{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.1;
+    z-index: -1;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* --- HEADER --- */
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+/* logo */
+
+#site-logo{
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+/* menu */
+
+header nav{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 5%;
+    left: -100vw;
+    transition: 0.2s;
+}
+
+header nav.show{
+    left: 0;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+header nav a{
+    text-decoration: none;
+     font-size: 5vh;
+    padding: 10px;
+    margin: auto 10px;
+    color: #8D6E42;
+    position: relative;
+}
+
+header nav a::after{
+    display: block;
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #8D6E42;
+    top: 80%;
+    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.2s;
+}
+
+header nav a:hover::after{
+    width: 90%;
+}
+/* icons mobile version */
+
+.fa-bars{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.fa-xmark{
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.fa-xmark:hover{
+    transform: rotate(90deg)
+}
+
+/* --- MAIN --- */
+
+main{
+    padding: 0 20px;
+}
+
+main section{
+    min-height: 100vh;
+}
+
+h2{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+main p{
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+#main-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: auto;
+}
+
+#main-gallery li{
+    width: 50%;
+    padding: 20px;
+    background-color: antiquewhite;
+
+}
+
+#main-gallery figure{
+    overflow: hidden;
+}
+
+#main-gallery img{
+    height: 200px;
+
+}
+
+@media (min-width: 600px){
+
+
+    header nav{
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: rgba(0,0,0,0);
+        padding: 20px;
+    }
+
+    header nav ul{
+        flex-direction: row;
+    }
+
+    header nav a{
+        font-size: 2.2rem;
+    }
+
+    .fa-bars, .fa-xmark{
+        display: none;
+    }
+
+}
