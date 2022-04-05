@@ -1,16 +1,109 @@
-jQuery(document).ready(function ($) {
+var textOverImages = document.getElementsByClassName("onClickTextOverImage");
+var previousTextOverImage;
 
+jQuery(document).ready(function ($) {
 
     $('.fa-bars').click(function () {
         $("nav").addClass('show');
     })
 
-        $('.fa-xmark').click(function () {
+    $('.fa-xmark').click(function () {
         $("nav").removeClass('show');
     })
 
-            $('a').click(function () {
+    $('a').click(function () {
         $("nav").removeClass('show');
     })
 
 });
+
+for (var i = 0; i < textOverImages.length; i++) {
+  textOverImages[i].onclick = function() {
+    var classes = this.classList;
+    if (classes.contains("show")) {
+      classes.remove("show");
+    } else {
+      if (previousTextOverImage != null)
+        previousTextOverImage.classList.remove("show");
+      previousTextOverImage = this;
+      classes.add("show");
+    }
+  }
+}
+
+function stopPropagation(event){
+  event.stopPropagation();
+}
+
+function donate() {
+        let name = prompt("What is your name?");
+        let phone = prompt("What is your phone number?");
+        let age = prompt("How old are you?");
+        if (
+          name !== null &&
+          name !== "" &&
+          name !== undefined &&
+          phone !== null &&
+          phone !== "" &&
+          phone !== undefined &&
+          age !== null &&
+          age !== "" &&
+          age !== undefined
+        ) {
+          if (age >= 18) {
+            alert(
+              "Thank you, " +
+                name +
+                " 🌺 We'll call you shortly at " +
+                phone +
+                " to discuss your donation!"
+            );
+          } else {
+            alert("Sorry, " + name + " you cannot donate. Minimum age is 18.");
+          }
+        } else {
+          alert("Please, try to type some text. ");
+        }
+      }
+
+      let donateButton = document.querySelector(".donate-button");
+      donateButton.addEventListener("click", donate);
+
+      function help() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let difference = prompt("Are you ready to make a difference 🐾 ?");
+        difference = difference.toLocaleLowerCase().trim();
+        if (
+          name !== null &&
+          name !== "" &&
+          name !== undefined &&
+          email !== null &&
+          email !== "" &&
+          email !== undefined &&
+          difference !== null &&
+          difference !== "" &&
+          difference !== undefined
+        )
+          if (difference === "yes") {
+            alert(
+              "Great, " +
+                name +
+                "! You will receive an email shortly to " +
+                email +
+                ". Your help is extremely valuable 🌺"
+            );
+          } else {
+            alert(
+              "That's okay, " +
+                name +
+                ". Contact us in case you change your mind."
+            );
+          }
+        else {
+          alert("Please, try to type some text.");
+        }
+      }
+
+      let helpButton = document.querySelector(".help-button");
+      helpButton.addEventListener("click", help);
