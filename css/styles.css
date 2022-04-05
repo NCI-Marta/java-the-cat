@@ -13,13 +13,13 @@ body {
 }
 
 html {
-	font-size: 0.625em;
+    font-size: 0.625em;
     scroll-behavior: smooth;
 }
 
 /* BACKGROUND VIDEO */
 
-#site-bg{
+#site-bg {
     position: fixed;
     height: 100vh;
     width: 100vw;
@@ -31,24 +31,24 @@ html {
 
 /* --- HEADER --- */
 
-header{
+header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
+    padding: 30px 30px 0 30px;
 }
 
 /* logo */
 
-#site-logo{
+#site-logo {
     width: 400px;
     margin-bottom: 20px;
 }
 
 /* menu */
 
-header nav{
+header nav {
     position: fixed;
     top: 0;
     width: 100vw;
@@ -61,27 +61,27 @@ header nav{
     transition: 0.2s;
 }
 
-header nav.show{
+header nav.show {
     left: 0;
 }
 
-header nav ul{
+header nav ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     text-transform: uppercase;
 }
 
-header nav a{
+header nav a {
     text-decoration: none;
-     font-size: 5vh;
+    font-size: 5vh;
     padding: 10px;
     margin: auto 10px;
     color: #8D6E42;
     position: relative;
 }
 
-header nav a::after{
+header nav a::after {
     display: block;
     content: "";
     position: absolute;
@@ -93,17 +93,18 @@ header nav a::after{
     transition: 0.2s;
 }
 
-header nav a:hover::after{
+header nav a:hover::after {
     width: 90%;
 }
+
 /* icons mobile version */
 
-.fa-bars{
+.fa-bars {
     font-size: 2rem;
     cursor: pointer;
 }
 
-.fa-xmark{
+.fa-xmark {
     position: absolute;
     top: 5%;
     right: 10%;
@@ -112,74 +113,149 @@ header nav a:hover::after{
     transition: 0.2s;
 }
 
-.fa-xmark:hover{
+.fa-xmark:hover {
     transform: rotate(90deg)
 }
 
 /* --- MAIN --- */
 
-main{
+main {
     padding: 0 20px;
 }
 
-main section{
-    min-height: 100vh;
+main section {
+
+    padding: 5%;
 }
 
-h2{
+h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
 }
 
-main p{
-    font-size: 1.5rem;
+main p {
+    font-size: 2rem;
     text-align: justify;
+    margin-bottom: 1.5rem;
 }
 
-#main-gallery{
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: auto;
+/* Images containers */
+
+.column {
+    padding: 15px;
 }
 
-#main-gallery li{
-    width: 50%;
-    padding: 20px;
-    background-color: antiquewhite;
+/* Clear floats after image containers */
 
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
-#main-gallery figure{
-    overflow: hidden;
+.column:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    filter: grayscale(60%);
 }
 
-#main-gallery img{
-    height: 200px;
-
+.donate-button {
+    border: 1.5px solid #8D6E42;
+    border-radius: 10px;
+    margin: 0cm 0cm 20px;
+    transition: background 250ms ease-in-out;
+    letter-spacing: 1px;
+    padding: 15px 20px;
+    background: #fff;
+    font-size: 17px;
+    right: 1cm;
+    top: 1cm;
+    position: sticky;
+    box-shadow: 5px 2px 2px rgba(122, 159, 177, 0.5);
 }
 
-@media (min-width: 600px){
+button:hover {
+    color: #212529;
+    background: radial-gradient(905px at 4.9% 85.8%,
+            rgb(255, 243, 242) 0.1%,
+            rgb(255, 247, 220) 57.6%);
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.onClickTextOverImage {
+    height: 400px;
+    background-size: cover;
+    margin: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.onClickTextOverImage div {
+    position: absolute;
+    color: #fff;
+    padding: 8px;
+    padding-top: 20%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.onClickTextOverImage.show div {
+    opacity: 1;
+    visibility: visible;
+    padding-top: 5%;
+}
+
+@media (min-width: 600px) {
 
 
-    header nav{
+    header nav {
         position: static;
         width: auto;
         height: auto;
-        background-color: rgba(0,0,0,0);
+        background-color: rgba(0, 0, 0, 0);
         padding: 20px;
     }
 
-    header nav ul{
+    header nav ul {
         flex-direction: row;
     }
 
-    header nav a{
+    header nav a {
         font-size: 2.2rem;
     }
 
-    .fa-bars, .fa-xmark{
+    .fa-bars,
+    .fa-xmark {
         display: none;
+    }
+
+    /* --- MAIN --- */
+
+    section{
+        min-height: 100vh;
+    }
+
+    .column {
+        float: left;
+        width: 22.22%;
+        padding: 15px;
+
+    }
+
+    .onClickTextOverImage.show div {
+        padding-top: 40%;
+    }
+
+    .onClickTextOverImage {
+        height: 200px
     }
 
 }
