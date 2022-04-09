@@ -1,6 +1,12 @@
 var textOverImages = document.getElementsByClassName("onClickTextOverImage");
 var previousTextOverImage;
 
+ $('.testimonials').slick({
+       autoplay: true,
+  autoplaySpeed: 10000,
+
+ });
+
 jQuery(document).ready(function ($) {
 
     $('.fa-bars').click(function () {
@@ -14,6 +20,7 @@ jQuery(document).ready(function ($) {
     $('a').click(function () {
         $("nav").removeClass('show');
     })
+
 
 });
 
@@ -106,4 +113,4 @@ function donate() {
       }
 
       let helpButton = document.querySelector(".help-button");
-      helpButton.addEventListener("click", help);
+

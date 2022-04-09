@@ -5,11 +5,8 @@
 }
 
 body {
-    font-family: "Glory", sans-serif;
-    font-size: ;
-    color: ;
+    font-family: "Glory", sans-serif !important;
     background-color: #FFE799;
-
 }
 
 html {
@@ -32,11 +29,12 @@ html {
 /* --- HEADER --- */
 
 header {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 30px 30px 0 30px;
+    height: 30vh;
 }
 
 /* logo */
@@ -93,6 +91,11 @@ header nav a::after {
     transition: 0.2s;
 }
 
+header nav a:hover {
+    text-decoration: none;
+    color: #8D6E42
+}
+
 header nav a:hover::after {
     width: 90%;
 }
@@ -124,13 +127,17 @@ main {
 }
 
 main section {
-
-    padding: 5%;
+    padding: 20px 5%;
 }
 
 h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 2rem;
 }
 
 main p {
@@ -139,21 +146,74 @@ main p {
     margin-bottom: 1.5rem;
 }
 
+#testimonials {
+    height: 70vh;
+    min-height: 70vh;
+    position: relative;
+}
+
+#testimonials h1 {
+    position: absolute;
+    top: 20px;
+    width: 90%;
+    text-align: center;
+    z-index: 2;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0px 0px 32px black;
+
+}
+
+#testimonials button {
+    display: none !important;
+}
+
+#testimonials .testimonials,
+.slick-list,
+.slick-track {
+    height: 100%;
+}
+
+#testimonials .testimonials div {
+    position: relative;
+}
+
+#testimonials img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#testimonials .testimonials div p {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    margin-bottom: 0;
+}
+
+#about-us img {
+    width: 100%;
+}
+
 /* Images containers */
 
-.column {
+#our-cats .column {
     padding: 15px;
 }
 
 /* Clear floats after image containers */
 
-.row::after {
+#our-cats .row::after {
     content: "";
     clear: both;
     display: table;
 }
 
-.column:hover {
+#our-cats .column:hover {
     opacity: 0.5;
     cursor: pointer;
     filter: grayscale(60%);
@@ -170,11 +230,10 @@ main p {
     font-size: 17px;
     right: 1cm;
     top: 1cm;
-    position: sticky;
     box-shadow: 5px 2px 2px rgba(122, 159, 177, 0.5);
 }
 
-button:hover {
+.donate-button:hover {
     color: #212529;
     background: radial-gradient(905px at 4.9% 85.8%,
             rgb(255, 243, 242) 0.1%,
@@ -183,7 +242,7 @@ button:hover {
     cursor: pointer;
 }
 
-.onClickTextOverImage {
+#our-cats .onClickTextOverImage {
     height: 400px;
     background-size: cover;
     margin: 4px;
@@ -191,7 +250,7 @@ button:hover {
     position: relative;
 }
 
-.onClickTextOverImage div {
+#our-cats .onClickTextOverImage div {
     position: absolute;
     color: #fff;
     padding: 8px;
@@ -207,13 +266,151 @@ button:hover {
     transition: 0.3s;
 }
 
-.onClickTextOverImage.show div {
+#our-cats .onClickTextOverImage.show div {
     opacity: 1;
     visibility: visible;
     padding-top: 5%;
 }
 
-@media (min-width: 600px) {
+/* --- CONTACT --- */
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.form__label {
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.form__group-input {
+    position: relative;
+}
+
+.form__input {
+    width: 100%;
+    background: #fff;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+    transition: 0.3s ease all;
+}
+
+.form__input:focus {
+    border: 3px solid #552e5a;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.form__input-error {
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+    /*hide error msg in main screen*/
+}
+
+.form__input-error-active {
+    display: block;
+}
+
+.form__validation-status {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.form__checkbox {
+    margin-right: 10px;
+}
+
+#group__terms,
+.form__msg-Displayed,
+.form__group-btn-submit {
+    grid-column: 1;
+}
+
+.form__msg-Displayed {
+    height: 45px;
+    line-height: 45px;
+    background: #f66060;
+    padding: 0px 15px;
+    border-radius: 3px;
+    display: none;
+}
+
+.form__msg-Displayed-active {
+    display: block;
+}
+
+.form__msg-Displayed p {
+    margin: 0;
+}
+
+.form__group-btn-submit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__btn {
+    height: 45px;
+    line-height: 45px;
+    width: 100%;
+    background: #552e5a;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.1s ease all;
+}
+
+.form__btn:hover {
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
+}
+
+.form__msg-success {
+    font-size: 14px;
+    color: #119200;
+    display: none;
+}
+
+.form__msg-success-active {
+    display: block;
+}
+
+/*Validation styles*/
+
+.form__group-right .form__validation-status {
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.form__group-wrong .form__label {
+    color: #bb2929;
+}
+
+.form__group-wrong .form__validation-status {
+    color: #bb2929;
+    opacity: 1;
+}
+
+.form__group-wrong .form__input {
+    border: 3px solid #bb2929;
+}
+
+
+
+@media (min-width: 1000px) {
 
 
     header nav {
@@ -239,23 +436,54 @@ button:hover {
 
     /* --- MAIN --- */
 
-    section{
+    section {
         min-height: 100vh;
     }
 
-    .column {
+    #our-cats .column {
         float: left;
-        width: 22.22%;
+        width: 25%;
         padding: 15px;
 
     }
 
-    .onClickTextOverImage.show div {
+    #our-cats .onClickTextOverImage.show div {
         padding-top: 40%;
     }
 
-    .onClickTextOverImage {
+    #our-cats .onClickTextOverImage {
         height: 200px
     }
+
+    /* --- CONTACT --- */
+
+    .form {
+grid-template-columns: [first] 40% [line2] 20% [line3] 40% [col4-start];
+    }
+
+    #group__terms,
+    .form__msg-Displayed{
+        grid-column: span 2;
+    }
+
+
+    .form__btn {
+        width: 30%;
+    }
+
+    form label {
+        font-size: 2rem;
+    }
+
+
+    #group__message, .form__group-btn-submit {
+        grid-column-start: 1;
+        grid-column-end: col4-start;
+    }
+
+    #group__message input{
+        padding: 20px 10px 150px 10px;
+    }
+
 
 }
