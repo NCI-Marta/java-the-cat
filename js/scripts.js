@@ -108,9 +108,6 @@ function help() {
   }
 }
 
-let helpButton = document.querySelector(".help-button");
-helpButton.addEventListener("click", help);
-
 //USE OF AN ARRAY
 
 function adopt() {
