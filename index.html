@@ -1,134 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Documento</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Glory:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Glory:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/1b16c04cca.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/1b16c04cca.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
 
-     <!-- jQuery -->
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-        <!-- Custom Scripts -->
+    <!-- Custom Scripts -->
+  </head>
 
+  <body>
+    <video muted loop src="img/site-bg.mp4" id="site-bg"></video>
+    <header>
+      <a href="index.html"
+        ><img
+          src="img/java-the-cat-logo.png"
+          alt="Logo of Java the Cat"
+          id="site-logo"
+      /></a>
+      <i class="fa-solid fa-bars"></i>
 
-</head>
-
-<body>
-<video  muted loop src="img/site-bg.mp4" id="site-bg"></video>
-<header>
-     <a href="index.html"><img src="img/java-the-cat-logo.png" alt="Logo of Java the Cat" id="site-logo"></a>
-            <i class="fa-solid fa-bars"></i>
-
-       <nav><i class="fa-solid fa-xmark"></i>
+      <nav>
+        <i class="fa-solid fa-xmark"></i>
         <ul>
-            <li><a href="about-us.html">About us</a></li>
-            <li><a href="#our-cats">Our cats</a></li>
-            <li><a href="#how-can-i-help">How can I help?</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <li><a href="about-us.html">About us</a></li>
+          <li><a href="#our-cats">Our cats</a></li>
+          <li><a href="#how-can-i-help">How can I help?</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-    </nav>
-</header>
+      </nav>
+    </header>
 
-<main>
+    <main>
+      <section id="about-us">
+        <h2>Java the cat says hi!</h2>
+        <h2>Be part of the solution, not the problem.</h2>
 
-<section id="about-us"><h2>Java the cat says hi!</h2>
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis aut deleniti assumenda, minima, cupiditate laboriosam quam unde odio exercitationem ex obcaecati laborum molestias reprehenderit ducimus quibusdam velit consequuntur quia ad.</p>
-   <p>Mollitia amet ducimus porro, praesentium natus unde doloribus dignissimos asperiores suscipit? Facere quam, saepe eos nesciunt aut. Ratione placeat quidem perspiciatis asperiores, quasi impedit pariatur, velit et commodi totam recusandae.</p>
-   <p>Laborum voluptatem eum ea recusandae! Minus quidem ducimus dolor laborum enim eos repudiandae, deleniti reiciendis molestiae animi maxime sunt rerum praesentium quam ab cum corporis, quasi placeat quo. Ad, autem!</p>
-   <p>Repellat non itaque nam facere nemo reprehenderit fugit doloremque blanditiis accusamus sequi architecto deleniti unde ab ipsum dolorem assumenda ad reiciendis eius obcaecati, dignissimos tempore? Nihil esse perferendis earum sit?</p>
-   <p>Eum quod ex, ea aspernatur harum nulla incidunt quasi rem iure amet ratione, eius sapiente. Aperiam dicta praesentium, voluptatibus expedita in ad. Fugit modi eum, quisquam officiis earum laboriosam commodi.</p>
-    </section>
+        <p>
+          Did you know that cat owners tend to be healthier and happier? Not
+          only you would benefit for having a cat buddy but also you will help
+          us to put a positive spin on the shameful statistic that shows that
+          approximately 3.2 million cats get abandoned each year. <br />
+          If you are thinking about adopting a cat, you are in the right place!
+          This non-profit organisation made up of volunteers will help you to
+          find the perfect fit for you. <i><b>It's all a matter of love.</b></i>
+        </p>
+        <p>
+          Laborum voluptatem eum ea recusandae! Minus quidem ducimus dolor
+          laborum enim eos repudiandae, deleniti reiciendis molestiae animi
+          maxime sunt rerum praesentium quam ab cum corporis, quasi placeat quo.
+          Ad, autem!
+        </p>
+        <p>
+          Repellat non itaque nam facere nemo reprehenderit fugit doloremque
+          blanditiis accusamus sequi architecto deleniti unde ab ipsum dolorem
+          assumenda ad reiciendis eius obcaecati, dignissimos tempore? Nihil
+          esse perferendis earum sit?
+        </p>
+        <p>
+          Eum quod ex, ea aspernatur harum nulla incidunt quasi rem iure amet
+          ratione, eius sapiente. Aperiam dicta praesentium, voluptatibus
+          expedita in ad. Fugit modi eum, quisquam officiis earum laboriosam
+          commodi.
+        </p>
+      </section>
 
-<section id="our-cats">
-    <h2>Meet our lovely cats ♥</h2>
+      <section id="our-cats">
+        <h2>Meet our lovely cats ♥</h2>
 
-		<div class="row">
-			<div class="column">
-				<div class="onClickTextOverImage"
-				 style="background-image:url(img/cat1.jpg)">
-					<div onclick="stopPropagation(event)"> Text for cat 1
-					</div>
-				</div>
-			</div>
+        <div class="row">
+          <div class="column">
+            <div
+              class="onClickTextOverImage"
+              style="background-image: url(img/cat1.jpg)"
+            >
+              <div onclick="stopPropagation(event)">Text for cat 1</div>
+            </div>
+          </div>
 
-			<div class="column">
-				<div class="onClickTextOverImage"
-				 style="background-image:url(img/cat2.jpg)">
-					<div onclick="stopPropagation(event)">Text for cat 2 </div>
-				</div>
-			</div>
+          <div class="column">
+            <div
+              class="onClickTextOverImage"
+              style="background-image: url(img/cat2.jpg)"
+            >
+              <div onclick="stopPropagation(event)">Text for cat 2</div>
+            </div>
+          </div>
 
-			<div class="column">
-				<div class="onClickTextOverImage"
-				 style="background-image:url(img/cat3.jpg)">
-					<div onclick="stopPropagation(event)">Text for cat 3 </div>
-				</div>
-			</div>
+          <div class="column">
+            <div
+              class="onClickTextOverImage"
+              style="background-image: url(img/cat3.jpg)"
+            >
+              <div onclick="stopPropagation(event)">Text for cat 3</div>
+            </div>
+          </div>
 
-			<div class="column">
-				<div class="onClickTextOverImage"
-				 style="background-image:url(img/cat4.jpg)">
-					<div onclick="stopPropagation(event)">Text for cat 4 </div>
-				</div>
+          <div class="column">
+            <div
+              class="onClickTextOverImage"
+              style="background-image: url(img/cat4.jpg)"
+            >
+              <div onclick="stopPropagation(event)">Text for cat 4</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div
+              class="onClickTextOverImage"
+              style="background-image: url(img/cat5.jpg)"
+            >
+              <div onclick="stopPropagation(event)">Text for cat 5</div>
+            </div>
+          </div>
 
-			</div>
+          <div class="column">
+            <div
+              class="onClickTextOverImage"
+              style="background-image: url(img/cat6.jpg)"
+            >
+              <div onclick="stopPropagation(event)">Text for cat 6</div>
+            </div>
+          </div>
 
-		</div>
-		<div class="row">
-			<div class="column">
-				<div class="onClickTextOverImage"
-				 style="background-image:url(img/cat5.jpg)">
-					<div onclick="stopPropagation(event)"> Text for cat 5
-					</div>
-				</div>
-			</div>
+          <div class="column">
+            <div
+              class="onClickTextOverImage"
+              style="background-image: url(img/cat7.jpg)"
+            >
+              <div onclick="stopPropagation(event)">Text for cat 7</div>
+            </div>
+          </div>
 
-			<div class="column">
-				<div class="onClickTextOverImage"
-				 style="background-image:url(img/cat6.jpg)">
-					<div onclick="stopPropagation(event)">Text for cat 6 </div>
-				</div>
-			</div>
+          <div class="column">
+            <div
+              class="onClickTextOverImage"
+              style="background-image: url(img/cat8.jpg)"
+            >
+              <div onclick="stopPropagation(event)">Text for cat 8</div>
+            </div>
+          </div>
+        </div>
 
-			<div class="column">
-				<div class="onClickTextOverImage"
-				 style="background-image:url(img/cat7.jpg)">
-					<div onclick="stopPropagation(event)">Text for cat 7 </div>
-				</div>
-			</div>
+        <p>
+          Visiting Java the Cat, you are visiting a family of cats that need a
+          house and will be happy to meet you all. We will help you through the
+          proccess of choosing a cat, getting all the information you require,
+          the pre-adoption procedure... We will be with you from the start till
+          the moment your cat(s) and you are happy and together!
+        </p>
+        <p>
+          If you can't have a cat at home right now, we will also offer you
+          multiple ways to spend a funny day with us and meet our family. Thanks
+          for your visit!
+        </p>
+      </section>
 
-			<div class="column">
-				<div class="onClickTextOverImage"
-				 style="background-image:url(img/cat8.jpg)">
-					<div onclick="stopPropagation(event)">Text for cat 8 </div>
-				</div>
+      <section id="how-can-i-help">
+        <h2>How can I help?</h2>
+        <button class="donate-button">Donate</button>
+      </section>
 
-			</div>
-
-		</div>
-
-    <p>Visiting Java the Cat, you are visiting a family of cats that need a house and will be happy to meet you all. We will help you through the proccess of choosing a cat, getting all the information you require, the pre-adoption procedure... We will be with you from the start till the moment your cat(s) and you are happy and together!</p>
-    <p>If you can't have a cat at home right now, we will also offer you multiple ways to spend a funny day with us and meet our family. Thanks for your visit!</p>
-</section>
-
-<section id="how-can-i-help">
-    <h2>How can I help?</h2>
-    		<button class="donate-button">Donate</button>
-</section>
-
-<section id="contact"><h2>Contact us</h2></section>
-
-</main>
-<script src = "js/scripts.js"> </script>
-</body>
+      <section id="contact"><h2>Contact us</h2></section>
+    </main>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
