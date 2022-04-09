@@ -1,6 +1,12 @@
 var textOverImages = document.getElementsByClassName("onClickTextOverImage");
 var previousTextOverImage;
 
+ $('.testimonials').slick({
+       autoplay: true,
+  autoplaySpeed: 10000,
+
+ });
+
 jQuery(document).ready(function ($) {
   $(".fa-bars").click(function () {
     $("nav").addClass("show");
@@ -13,6 +19,7 @@ jQuery(document).ready(function ($) {
   $("a").click(function () {
     $("nav").removeClass("show");
   });
+
 });
 
 for (var i = 0; i < textOverImages.length; i++) {
@@ -153,3 +160,4 @@ function adopt() {
 function hide() {
   document.getElementById("button").style.display = "none";
 }
+
