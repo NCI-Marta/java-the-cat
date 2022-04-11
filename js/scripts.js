@@ -1,11 +1,11 @@
+//------>GALLERY CATS - TEXT OVER IMAGES
 var textOverImages = document.getElementsByClassName("onClickTextOverImage");
 var previousTextOverImage;
 
- $('.testimonials').slick({
-       autoplay: true,
+$(".testimonials").slick({
+  autoplay: true,
   autoplaySpeed: 10000,
-
- });
+});
 
 jQuery(document).ready(function ($) {
   $(".fa-bars").click(function () {
@@ -19,7 +19,6 @@ jQuery(document).ready(function ($) {
   $("a").click(function () {
     $("nav").removeClass("show");
   });
-
 });
 
 for (var i = 0; i < textOverImages.length; i++) {
@@ -39,7 +38,7 @@ for (var i = 0; i < textOverImages.length; i++) {
 function stopPropagation(event) {
   event.stopPropagation();
 }
-
+//------>BUTTOM DONATE
 function donate() {
   let name = prompt("What is your name?");
   let phone = prompt("What is your phone number?");
@@ -108,13 +107,14 @@ function help() {
   }
 }
 
+//------>BUTTOM REQUEST CAT FOR ADOPTION
 //USE OF AN ARRAY
 
 function adopt() {
   //get user input
   userName = prompt("What is your name?");
   userPhone = prompt("What is your phone number?");
-  userCatsNo = prompt("How many cats would you like to adopt? (max. 8)");
+  userCatsNo = prompt("How many cats would you like to adopt?");
 
   //Validate prompt to avoid accepting null values
   if (
@@ -158,7 +158,7 @@ function hide() {
   document.getElementById("button").style.display = "none";
 }
 
-//form
+//------>CONTACT SECTION - FORM
 
 const form = document.getElementById("formId");
 const inputs = document.querySelectorAll("#formId input");
