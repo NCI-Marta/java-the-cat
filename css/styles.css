@@ -1,29 +1,28 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: "Glory", sans-serif !important;
-    background-color: #FFE799;
 }
 
 html {
-  font-size: 0.625em;
-  scroll-behavior: smooth;
+    font-size: 0.625em;
+    scroll-behavior: smooth;
 }
 
 /* BACKGROUND VIDEO */
 
 #site-bg {
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  opacity: 0.1;
-  z-index: -1;
-  object-fit: cover;
-  object-position: center;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.1;
+    z-index: -1;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* --- HEADER --- */
@@ -35,60 +34,68 @@ header {
     align-items: center;
     padding: 30px 30px 0 30px;
     height: 30vh;
+    max-height: 30vh;
 }
 
 /* logo */
 
+
+header a {
+    height: 100%;
+}
+
 #site-logo {
-  width: 400px;
-  margin-bottom: 20px;
+    max-width: 400px;
+    height: 100%;
+    margin-bottom: 20px;
 }
 
 /* menu */
 
 header nav {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  padding: 5%;
-  left: -100vw;
-  transition: 0.2s;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 5%;
+    left: -100vw;
+    transition: 0.2s;
+    z-index: 9999;
 }
 
 header nav.show {
-  left: 0;
+    left: 0;
 }
 
 header nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  text-transform: uppercase;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
 }
 
 header nav a {
-  text-decoration: none;
-  font-size: 5vh;
-  padding: 10px;
-  margin: auto 10px;
-  color: #8d6e42;
-  position: relative;
+    text-decoration: none;
+    font-size: 5vh;
+    padding: 10px;
+    margin: auto 10px;
+    color: #8d6e42;
+    position: relative;
 }
 
 header nav a::after {
-  display: block;
-  content: "";
-  position: absolute;
-  border-bottom: 1px solid #8d6e42;
-  top: 80%;
-  width: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: 0.2s;
+    display: block;
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #8d6e42;
+    top: 80%;
+    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.2s;
 }
 
 header nav a:hover {
@@ -97,33 +104,33 @@ header nav a:hover {
 }
 
 header nav a:hover::after {
-  width: 90%;
+    width: 90%;
 }
 
 /* icons mobile version */
 
 .fa-bars {
-  font-size: 2rem;
-  cursor: pointer;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 .fa-xmark {
-  position: absolute;
-  top: 5%;
-  right: 10%;
-  font-size: 2rem;
-  cursor: pointer;
-  transition: 0.2s;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 .fa-xmark:hover {
-  transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 /* --- MAIN --- */
 
 main {
-  padding: 0 20px;
+    padding: 0 20px;
 }
 
 main section {
@@ -145,14 +152,15 @@ h3 {
 
 
 main p {
-  font-size: 2rem;
-  text-align: justify;
-  margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-align: justify;
+    margin-bottom: 1.5rem;
 }
 
 #testimonials {
     height: 70vh;
     min-height: 70vh;
+    max-height: 70vh;
     position: relative;
 }
 
@@ -223,34 +231,36 @@ main p {
     filter: grayscale(60%);
 }
 
+.container-btn-request {
+    position: relative;
+}
+
 .request-btn {
-display: block;
-  border: 1.5px solid pink;
-  border-radius: 2em;
-  margin: 20px auto;
-  transition: background 250ms ease-in-out;
-  letter-spacing: 1px;
-  padding: 17.92px 29.92px;
-  background: #d9917b;
-  color: floralwhite;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 17px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 900;
-  box-shadow: 5px 2px 2px rgba(122, 159, 177, 0.5);
+    display: block;
+    border: 1.5px solid pink;
+    border-radius: 2em;
+    margin: 20px auto;
+    transition: background 250ms ease-in-out;
+    letter-spacing: 1px;
+    padding: 17.92px 29.92px;
+    background: #d9917b;
+    color: floralwhite;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 17px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    box-shadow: 5px 2px 2px rgba(122, 159, 177, 0.5);
 }
 
 
 .request-btn:hover {
-  color: #212529;
-  background: radial-gradient(
-    905px at 4.9% 85.8%,
-    rgb(255, 243, 242) 0.1%,
-    rgb(255, 247, 220) 57.6%
-  );
-  opacity: 0.9;
-  cursor: pointer;
+    color: #212529;
+    background: radial-gradient(905px at 4.9% 85.8%,
+            rgb(255, 243, 242) 0.1%,
+            rgb(255, 247, 220) 57.6%);
+    opacity: 0.9;
+    cursor: pointer;
 }
 
 .donate-button {
@@ -317,8 +327,8 @@ display: block;
 .form__label {
     display: block;
     font-weight: 700;
-    padding: 10px;
     cursor: pointer;
+    font-size: 2rem
 }
 
 .form__group-input {
@@ -357,7 +367,7 @@ display: block;
     position: absolute;
     right: 10px;
     bottom: 15px;
-    z-index: 100;
+    z-index: 3;
     font-size: 16px;
     opacity: 0;
 }
@@ -379,6 +389,10 @@ display: block;
     padding: 0px 15px;
     border-radius: 3px;
     display: none;
+}
+
+#group__message input {
+    padding: 20px 10px 150px 10px;
 }
 
 .form__msg-Displayed-active {
@@ -446,191 +460,185 @@ display: block;
 
 @media (min-width: 1000px) {
 
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.column:hover {
-  opacity: 0.5;
-  cursor: pointer;
-  filter: grayscale(60%);
-}
-
-.donate-button {
-  border: 1.5px solid #8d6e42;
-  border-radius: 10px;
-  margin: 0cm 0cm 20px;
-  transition: background 250ms ease-in-out;
-  letter-spacing: 1px;
-  padding: 15px 20px;
-  background: #fff;
-  font-size: 17px;
-  right: 1cm;
-  top: 1cm;
-  position: sticky;
-  box-shadow: 5px 2px 2px rgba(122, 159, 177, 0.5);
-}
-
-.donate-button:hover {
-  color: #212529;
-  background: radial-gradient(
-    905px at 4.9% 85.8%,
-    rgb(255, 243, 242) 0.1%,
-    rgb(255, 247, 220) 57.6%
-  );
-  opacity: 0.9;
-  cursor: pointer;
-}
-
-.onClickTextOverImage {
-  height: 400px;
-  background-size: cover;
-  margin: 4px;
-  cursor: pointer;
-  position: relative;
-}
-
-.onClickTextOverImage div {
-  position: absolute;
-  color: #fff;
-  padding: 8px;
-  padding-top: 20%;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-align: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s;
-}
-
-.onClickTextOverImage.show div {
-  opacity: 1;
-  visibility: visible;
-  padding-top: 5%;
-}
-
-@media (min-width: 600px) {
-  header nav {
-    position: static;
-    width: auto;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0);
-    padding: 20px;
-  }
-
-  header nav ul {
-    flex-direction: row;
-  }
-
-  header nav a {
-    font-size: 2.2rem;
-  }
-
-  .fa-bars,
-  .fa-xmark {
-    display: none;
-  }
-
-  /* --- MAIN --- */
-
-  section {
-    min-height: 100vh;
-  }
-
-  .column {
-    float: left;
-    width: 22.22%;
-    padding: 15px;
-  }
-
-  .onClickTextOverImage.show div {
-    padding-top: 40%;
-  }
-
-    header nav {
-        position: static;
-        width: auto;
-        height: auto;
-        background-color: rgba(0, 0, 0, 0);
-        padding: 20px;
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
     }
 
-    header nav ul {
-        flex-direction: row;
+    .column:hover {
+        opacity: 0.5;
+        cursor: pointer;
+        filter: grayscale(60%);
     }
 
-    header nav a {
-        font-size: 2.2rem;
+    .donate-button {
+        border: 1.5px solid #8d6e42;
+        border-radius: 10px;
+        margin: 0cm 0cm 20px;
+        transition: background 250ms ease-in-out;
+        letter-spacing: 1px;
+        padding: 15px 20px;
+        background: #fff;
+        font-size: 17px;
+        box-shadow: 5px 2px 2px rgba(122, 159, 177, 0.5);
     }
 
-    .fa-bars,
-    .fa-xmark {
-        display: none;
+    .donate-button:hover {
+        color: #212529;
+        background: radial-gradient(905px at 4.9% 85.8%,
+                rgb(255, 243, 242) 0.1%,
+                rgb(255, 247, 220) 57.6%);
+        opacity: 0.9;
+        cursor: pointer;
     }
 
-    /* --- MAIN --- */
-
-    section {
-        min-height: 100vh;
+    .onClickTextOverImage {
+        height: 400px;
+        background-size: cover;
+        margin: 4px;
+        cursor: pointer;
+        position: relative;
     }
 
-    #our-cats .column {
-        float: left;
-        width: 25%;
-        padding: 15px;
-
+    .onClickTextOverImage div {
+        position: absolute;
+        color: #fff;
+        padding: 8px;
+        padding-top: 20%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
     }
 
-    #our-cats .onClickTextOverImage.show div {
-        padding-top: 40%;
+    .onClickTextOverImage.show div {
+        opacity: 1;
+        visibility: visible;
+        padding-top: 5%;
     }
 
-    #our-cats .onClickTextOverImage {
-        height: 200px
+    @media (min-width: 600px) {
+        header nav {
+            position: static;
+            width: auto;
+            height: auto;
+            background-color: rgba(0, 0, 0, 0);
+            padding: 20px;
+        }
+
+        header nav ul {
+            flex-direction: row;
+        }
+
+        header nav a {
+            font-size: 2.2rem;
+        }
+
+        .fa-bars,
+        .fa-xmark {
+            display: none;
+        }
+
+        /* --- MAIN --- */
+
+        section {
+            min-height: 100vh;
+        }
+
+        .column {
+            float: left;
+            width: 22.22%;
+            padding: 15px;
+        }
+
+        .onClickTextOverImage.show div {
+            padding-top: 40%;
+        }
+
+        header nav {
+            position: static;
+            width: auto;
+            height: auto;
+            background-color: rgba(0, 0, 0, 0);
+            padding: 20px;
+        }
+
+        header nav ul {
+            flex-direction: row;
+        }
+
+        header nav a {
+            font-size: 2.2rem;
+        }
+
+        .fa-bars,
+        .fa-xmark {
+            display: none;
+        }
+
+        /* --- MAIN --- */
+
+        section {
+            min-height: 100vh;
+        }
+
+        #our-cats .column {
+            float: left;
+            width: 25%;
+            padding: 15px;
+
+        }
+
+        #our-cats .onClickTextOverImage.show div {
+            padding-top: 40%;
+        }
+
+        #our-cats .onClickTextOverImage {
+            height: 200px
+        }
+
+        /* --- CONTACT --- */
+
+        .form {
+            grid-template-columns: [first] 40% [line2] 20% [line3] 40% [col4-start];
+        }
+
+        #group__terms,
+        .form__msg-Displayed {
+            grid-column: span 2;
+        }
+
+
+        .form__btn {
+            width: 30%;
+        }
+
+        form label {
+            font-size: 2rem;
+        }
+
+        #group__message,
+        .form__group-btn-submit {
+            grid-column-start: 1;
+            grid-column-end: col4-start;
+        }
+
+
+        .onClickTextOverImage {
+            height: 200px;
+            font-size: 20px;
+            font-family: "Cormorant Garamond", serif;
+        }
     }
 
-    /* --- CONTACT --- */
-
-    .form {
-grid-template-columns: [first] 40% [line2] 20% [line3] 40% [col4-start];
+    @media(orientation:landscape) and (max-height: 800px){
+        header{
+            flex-direction: row;
+        }
     }
-
-    #group__terms,
-    .form__msg-Displayed{
-        grid-column: span 2;
-    }
-
-
-    .form__btn {
-        width: 30%;
-    }
-
-    form label {
-        font-size: 2rem;
-    }
-
-
-    #group__message, .form__group-btn-submit {
-        grid-column-start: 1;
-        grid-column-end: col4-start;
-    }
-
-    #group__message input{
-        padding: 20px 10px 150px 10px;
-    }
-
-  .onClickTextOverImage {
-    height: 200px;
-    font-size: 20px;
-    font-family: "Cormorant Garamond", serif;
-  }
-}
-.container-btn-request {
-  position: relative;
-}
-
