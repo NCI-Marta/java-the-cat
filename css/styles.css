@@ -324,8 +324,9 @@ main p {
     cursor: pointer;
 }
 /* --- HOW CAN I HELP ---*/
-
-img {
+.fosteringImg,
+.volunteeringImg, 
+.adoptionImg{
     display: block;
     margin: 0 auto;
     max-width: 100%;
