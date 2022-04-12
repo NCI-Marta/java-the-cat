@@ -214,6 +214,7 @@ main p {
     color: white;
     margin-bottom: 0;
     width: 100%;
+    font-size: 1.2rem;
 }
 
 #about-us img {
@@ -251,6 +252,7 @@ main p {
     margin: 4px;
     cursor: pointer;
     position: relative;
+    background-position: center
 }
 
 #our-cats .onClickTextOverImage div {
@@ -610,9 +612,9 @@ main p {
 
     /* --- MAIN --- */
 
-    /* section {
-        min-height: 100vh;
-    }*/
+    #testimonials .testimonials div p{
+        font-size: 2rem;
+    }
 
     .column {
         float: left;
