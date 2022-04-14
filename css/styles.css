@@ -42,12 +42,15 @@ header {
 
 header a {
     height: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
 }
 
 #site-logo {
-    max-width: 400px;
     height: 100%;
-    margin-bottom: 20px;
+    width: 100%;
+    object-fit: contain;
 }
 
 /* menu */
@@ -82,15 +85,16 @@ header nav a {
     font-size: 5vh;
     padding: 10px;
     margin: auto 10px;
-    color: #8d6e42;
+    color: #333;
     position: relative;
+    transition: 0.2s;
 }
 
 header nav a::after {
     display: block;
     content: "";
     position: absolute;
-    border-bottom: 1px solid #8d6e42;
+    border-bottom: 1px solid #d9917b;
     top: 80%;
     width: 0;
     left: 50%;
@@ -100,7 +104,7 @@ header nav a::after {
 
 header nav a:hover {
     text-decoration: none;
-    color: #8D6E42
+    color: #d9917b
 }
 
 header nav a:hover::after {
@@ -138,21 +142,20 @@ main section {
     padding: 20px 5%;
 }
 
-h2 {
-    font-size: 2.5rem;
+section h2 {
+    font-size: 3.5rem;
+    padding: 2rem;
     margin-bottom: 2rem;
     margin-top: 0;
     text-align: center;
-    /*color: #d9917b;*/
-    font-family: "Cormorant Garamond", serif;
-    text-decoration: none;      
+    text-decoration: none;
+
+    border-bottom: 1px solid #d9917b;
 }
 
 h3 {
     font-size: 2rem;
-
 }
-
 
 main p {
     font-size: 2rem;
@@ -167,9 +170,10 @@ main p {
     position: relative;
 }
 
-#testimonials h1 {
+#testimonials h2 {
+    font-size: 3rem;
     position: absolute;
-    top: 20px;
+    top: 40px;
     width: 90%;
     text-align: center;
     z-index: 2;
@@ -177,6 +181,7 @@ main p {
     text-transform: uppercase;
     color: white;
     text-shadow: 0px 0px 32px black;
+    border-bottom: none;
 
 }
 
@@ -208,13 +213,15 @@ main p {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     margin-bottom: 0;
+    width: 100%;
+    font-size: 1.2rem;
 }
 
 #about-us img {
     width: 100%;
 }
 
-/*---GALLERY ---*/
+/* --- GALLERY --- */
 /* Images containers */
 
 #our-cats .column {
@@ -238,12 +245,14 @@ main p {
 .container-btn-request {
     position: relative;
 }
+
 #our-cats .onClickTextOverImage {
     height: 400px;
     background-size: cover;
     margin: 4px;
     cursor: pointer;
     position: relative;
+    background-position: center
 }
 
 #our-cats .onClickTextOverImage div {
@@ -266,30 +275,41 @@ main p {
     opacity: 1;
     visibility: visible;
     padding-top: 5%;
+    font-size: 2rem;
 }
+
+#our-cats .onClickTextOverImage div b:first-of-type {
+    font-size: 150%;
+    text-transform: uppercase;
+    font-weight: 200;
+
+}
+
 /*BUTTONS -------->*/
 /* REQUEST BUTTON*/
 
-.request-btn {
+.request-btn,
+.donate-button,
+.form__btn {
     display: block;
     border: 1.5px solid pink;
-    border-radius: 2em;
+    border-radius: 35px;
     margin: 20px auto;
     transition: background 250ms ease-in-out;
     letter-spacing: 1px;
-    padding: 17.92px 29.92px;
+    padding: 18px 30px;
     background: #d9917b;
     color: floralwhite;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 17px;
+    font-size: 2.5rem;
     text-align: center;
-    font-size: 18px;
-    font-weight: 900;
+    font-weight: 400;
     box-shadow: 5px 2px 2px rgba(122, 159, 177, 0.5);
+
 }
 
-
-.request-btn:hover {
+.request-btn:hover,
+.donate-button:hover,
+.form__btn:hover {
     color: #212529;
     background: radial-gradient(905px at 4.9% 85.8%,
             rgb(255, 243, 242) 0.1%,
@@ -298,35 +318,12 @@ main p {
     cursor: pointer;
 }
 
-/*---DONATE BUTTON ---*/
-.donate-button {
-    border: 1.5px solid pink;
-    border-radius: 10px;
-    margin: 0cm 0cm 20px;
-    transition: background 250ms ease-in-out;
-    letter-spacing: 1px;
-    padding: 15px 20px;
-    background: #fff;
-    font-size: 17px;
-    right: 1cm;
-    top: 1cm;
-    box-shadow: 5px 2px 2px rgba(122, 159, 177, 0.5);
 
-    
-}
-
-.donate-button:hover {
-    color: #212529;
-    background: radial-gradient(905px at 4.9% 85.8%,
-            rgb(255, 243, 242) 0.1%,
-            rgb(255, 247, 220) 57.6%);
-    opacity: 0.9;
-    cursor: pointer;
-}
 /* --- HOW CAN I HELP ---*/
+
 .fosteringImg,
-.volunteeringImg, 
-.adoptionImg{
+.volunteeringImg,
+.adoptionImg {
     display: block;
     margin: 0 auto;
     max-width: 100%;
@@ -335,48 +332,45 @@ main p {
 
 .d-flex {
     display: flex;
+    flex-direction: column;
     list-style-type: none;
     text-align: justify;
     padding: 0;
-    max-width: 600px;
     margin: 0 auto;
-    padding: 10px 20px;
 }
 
 .d-flex > div {
     background-color: #f6e3ca;
     border: #d7c8b6 2px solid;
-    margin-right: 10px;
-    width: calc(100% / 3);
+    padding: 20px;
+    margin-bottom: 20px;
 }
+
 .d-flex > div:last-child {
     margin-right: 0;
 }
-      
+
 .fosteringHeader,
-.volunteeringHeader, 
+.volunteeringHeader,
 .adoptionHeader {
     text-align: center;
     color: #d9917b;
-    font-family: "Cormorant Garamond", serif;
     font-size: 40px;
     position: relative;
 }
-.adoptionText {
-    font-size: 17px;
-    font-family: "Cormorant Garamond" serif;
-}
-.fosteringText {
-    font-size: 17px;
-    font-family: "Cormorant Garamond" serif;
-}
+
+.adoptionText,
+.fosteringText,
 .volunteeringText {
     font-size: 17px;
-    font-family: "Cormorant Garamond" serif;
+    margin-top: 20px;
 }
 
-
 /* --- CONTACT --- */
+
+#contact h2 {
+    margin-bottom: 40px;
+}
 
 .form {
     display: grid;
@@ -407,7 +401,7 @@ main p {
 }
 
 .form__input:focus {
-    border: 3px solid #552e5a;
+    border: 3px solid #d9917b;
     outline: none;
     box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
 }
@@ -463,29 +457,6 @@ main p {
     margin: 0;
 }
 
-.form__group-btn-submit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.form__btn {
-    height: 45px;
-    line-height: 45px;
-    width: 100%;
-    background: #552e5a;
-    color: #fff;
-    font-weight: bold;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: 0.1s ease all;
-}
-
-.form__btn:hover {
-    box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
-}
-
 .form__msg-success {
     font-size: 20px;
     color: #5b446a;
@@ -501,7 +472,7 @@ main p {
     display: block;
 }
 
-/*Validation styles*/
+/* Validation styles */
 
 .form__group-right .form__validation-status {
     color: #1ed12d;
@@ -521,7 +492,209 @@ main p {
     border: 3px solid #bb2929;
 }
 
+/* --- FOOTER --- */
 
+#footer-content {
+    border-top: 3px solid #d9917b;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 2rem;
+    text-align: center;
+}
+
+#footer-content ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+#footer-content li {
+    width: 50%;
+    margin-bottom: 2rem;
+}
+
+#footer-content img {
+    width: 100%;
+}
+
+#social-media {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+#social-media i {
+    margin-right: 0.7rem;
+}
+
+#social-media a {
+    color: #333;
+}
+
+#social-media a:hover {
+    color: #d9917b
+}
+
+/* BACK TO TOP */
+
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #d9917b;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 1.8rem;
+    /* Increase font size */
+}
+
+#back-to-top:hover {
+    background-color: #555;
+    /* Add a dark-grey background on hover */
+}
+
+@media (max-aspect-ratio: 1/2) {
+
+    header {
+        padding: 10px;
+    }
+
+    header nav {
+        position: static;
+        justify-content: center;
+        background: none;
+        padding: 10px;
+    }
+
+    header nav ul {
+        margin-bottom: 0;
+    }
+
+    .fa-bars,
+    .fa-xmark {
+        display: none;
+    }
+
+    header nav ul a {
+        font-size: 4vw;
+        padding: 0;
+    }
+
+}
+
+
+@media (min-width: 700px) {
+    header nav {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0);
+        padding: 20px;
+    }
+
+    header nav ul {
+        flex-direction: row;
+    }
+
+    header nav a {
+        font-size: 2.2rem;
+    }
+
+    .fa-bars,
+    .fa-xmark {
+        display: none;
+    }
+
+    /* --- MAIN --- */
+
+    #testimonials .testimonials div p{
+        font-size: 2rem;
+    }
+
+    .column {
+        float: left;
+        width: 22.22%;
+        padding: 15px;
+    }
+
+    header nav {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0);
+        padding: 20px;
+    }
+
+    header nav ul {
+        flex-direction: row;
+    }
+
+    header nav a {
+        font-size: 2.2rem;
+    }
+
+    .fa-bars,
+    .fa-xmark {
+        display: none;
+    }
+
+    /* --- MAIN --- */
+
+    #our-cats .column {
+        float: left;
+        width: 50%;
+        padding: 15px;
+
+    }
+
+    #our-cats .onClickTextOverImage {
+        height: 200px
+    }
+
+    /* --- CONTACT --- */
+
+    .form {
+        grid-template-columns: 40% 20%
+    }
+
+    #group__terms,
+    .form__msg-Displayed {
+        grid-column: span 2;
+    }
+
+
+    .form__btn {
+        font-size: 2rem;
+        padding: 1.8rem 4rem;
+    }
+
+    form label {
+        font-size: 2rem;
+        grid-column-end: auto
+    }
+
+    #group__message,
+    .form__group-btn-submit {
+        grid-column-start: 1;
+        grid-column-end: col4-start;
+    }
+
+
+    .onClickTextOverImage {
+        height: 200px;
+        font-size: 20px;
+    }
+}
 
 @media (min-width: 1000px) {
 
@@ -537,26 +710,6 @@ main p {
         filter: grayscale(60%);
     }
 
-    .donate-button {
-        border: 1.5px solid #8d6e42;
-        border-radius: 10px;
-        margin: 0cm 0cm 20px;
-        transition: background 250ms ease-in-out;
-        letter-spacing: 1px;
-        padding: 15px 20px;
-        background: #fff;
-        font-size: 17px;
-        box-shadow: 5px 2px 2px rgba(122, 159, 177, 0.5);
-    }
-
-    .donate-button:hover {
-        color: #212529;
-        background: radial-gradient(905px at 4.9% 85.8%,
-                rgb(255, 243, 242) 0.1%,
-                rgb(255, 247, 220) 57.6%);
-        opacity: 0.9;
-        cursor: pointer;
-    }
 
     .onClickTextOverImage {
         height: 400px;
@@ -588,122 +741,71 @@ main p {
         padding-top: 5%;
     }
 
-    @media (min-width: 600px) {
-        header nav {
-            position: static;
-            width: auto;
-            height: auto;
-            background-color: rgba(0, 0, 0, 0);
-            padding: 20px;
-        }
+    #our-cats .column {
+        width: 25%;
 
-        header nav ul {
-            flex-direction: row;
-        }
-
-        header nav a {
-            font-size: 2.2rem;
-        }
-
-        .fa-bars,
-        .fa-xmark {
-            display: none;
-        }
-
-        /* --- MAIN --- */
-
-        section {
-            min-height: 100vh;
-        }
-
-        .column {
-            float: left;
-            width: 22.22%;
-            padding: 15px;
-        }
-
-        .onClickTextOverImage.show div {
-            padding-top: 40%;
-        }
-
-        header nav {
-            position: static;
-            width: auto;
-            height: auto;
-            background-color: rgba(0, 0, 0, 0);
-            padding: 20px;
-        }
-
-        header nav ul {
-            flex-direction: row;
-        }
-
-        header nav a {
-            font-size: 2.2rem;
-        }
-
-        .fa-bars,
-        .fa-xmark {
-            display: none;
-        }
-        
-        /* --- MAIN --- */
-
-        section {
-            min-height: 100vh;
-        }
-
-        #our-cats .column {
-            float: left;
-            width: 25%;
-            padding: 15px;
-
-        }
-
-        #our-cats .onClickTextOverImage.show div {
-            padding-top: 40%;
-        }
-
-        #our-cats .onClickTextOverImage {
-            height: 200px
-        }
-
-        /* --- CONTACT --- */
-
-        .form {
-            grid-template-columns: [first] 40% [line2] 20% [line3] 40% [col4-start];
-        }
-
-        #group__terms,
-        .form__msg-Displayed {
-            grid-column: span 2;
-        }
-
-
-        .form__btn {
-            width: 30%;
-        }
-
-        form label {
-            font-size: 2rem;
-        }
-
-        #group__message,
-        .form__group-btn-submit {
-            grid-column-start: 1;
-            grid-column-end: col4-start;
-        }
-
-
-        .onClickTextOverImage {
-            height: 200px;
-            font-size: 20px;
-            font-family: "Cormorant Garamond", serif;
-        }
     }
 
-    @media(orientation:landscape) and (max-height: 800px){
-        header{
-            flex-direction: row;
-        }
+    .d-flex {
+        flex-direction: row;
     }
+
+    .d-flex > div {
+        margin: 2rem;
+    }
+
+    .donate-button {
+        width: 30%;
+    }
+
+    #footer-content ul {
+        flex-direction: row;
+        width: 90%;
+        margin: 2rem;
+    }
+
+    #footer-content li {
+        height: 60px;
+        width: auto;
+        margin-bottom: 0;
+        margin-right: 2rem;
+    }
+
+    #footer-content li:first-of-type {
+        margin-left: auto;
+    }
+
+    #footer-content li:last-of-type {
+        margin-right: auto;
+    }
+
+    #footer-content li a {
+        display: block;
+        height: 100%;
+    }
+
+    #footer-content img {
+        height: 100%;
+        object-fit: contain;
+    }
+
+    #footer-content #social-media{
+        margin: 1rem 0 3rem 0;
+    }
+
+}
+
+@media(orientation:landscape) and (max-height: 1000px) {
+    header {
+        flex-direction: row;
+    }
+
+    #site-logo {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    header ul {
+        margin-bottom: 0;
+    }
+}
