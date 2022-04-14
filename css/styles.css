@@ -466,6 +466,7 @@ main p {
     background: #7dd87d;
     padding: 0px 15px;
     border-radius: 3px;
+    text-align: center;
 }
 
 .form__msg-success-active {
