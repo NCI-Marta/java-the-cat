@@ -487,9 +487,14 @@ main p {
 }
 
 .form__msg-success {
-    font-size: 14px;
-    color: #119200;
-    display: none;
+    font-size: 20px;
+    color: #5b446a;
+    display: none;    
+    height: 45px;
+    line-height: 45px;
+    background: #7dd87d;
+    padding: 0px 15px;
+    border-radius: 3px;
 }
 
 .form__msg-success-active {
