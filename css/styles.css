@@ -181,16 +181,16 @@ main p {
 #testimonials h2 {
     font-size: 3rem;
     position: absolute;
-    top: 4rem;
+    top: 3rem;
     width: 90%;
     text-align: center;
     z-index: 2;
     font-weight: 800;
     text-transform: uppercase;
     color: white;
-    text-shadow: rem rem 32px black;
+    text-shadow: 0rem 0rem 3.2rem black;
     border-bottom: none;
-
+    margin: 0;
 }
 
 #testimonials button {
@@ -414,11 +414,11 @@ main p {
 .form__input:focus {
     border: 3px solid #d9917b;
     outline: none;
-    box-shadow: 3px rem 3rem rgba(163, 163, 163, 0.4);
+    box-shadow: 3px 0rem 3rem rgba(163, 163, 163, 0.4);
 }
 
 .form__input-error {
-    font-size: 12px;
+    font-size: 1.2rem;
     margin-bottom: 0;
     display: none;
     /*hide error msg in main screen*/
@@ -451,8 +451,8 @@ main p {
     height: 45px;
     line-height: 45px;
     background: #f66060;
-    padding: rem 15px;
-    border-radius: 3px;
+    padding: 0 1.5rem;
+    border-radius: 0.3rem;
     display: none;
 }
 
@@ -475,7 +475,7 @@ main p {
     height: 45px;
     line-height: 45px;
     background: #7dd87d;
-    padding: rem 15px;
+    padding: 0 15px;
     border-radius: 3px;
     text-align: center;
 }
@@ -605,7 +605,7 @@ main p {
 }
 
 
-@media (min-width: 70rem) {
+@media (min-width: 700px) {
     header nav {
         position: static;
         width: auto;
@@ -708,7 +708,7 @@ main p {
     }
 }
 
-@media (min-width: 100rem) {
+@media (min-width: 1000px) {
 
     .row::after {
         content: "";
@@ -807,7 +807,7 @@ main p {
 
 }
 
-@media(orientation:landscape) and (max-height: 100rem) {
+@media(orientation:landscape) and (max-height: 1000px) {
     header {
         flex-direction: row;
     }
